@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #222;
+}
+
+.header a {
+    padding: 18px;
+    color: #bbb;
+    text-decoration: none;
+}
+
+.header .logo {
+    font-size: 20px;
+}
+
+.header a:hover,
+.header .active {
+    background-color: black;
+    color: white;
+}
+
+.header .login {
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    min-height: 450px;
+}
+
+.left,
+.right {
+    width: 20%;
+    padding: 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.left a {
+    display: block;
+    margin-bottom: 20px;
+    color: #1976d2;
+    text-decoration: none;
+}
+
+.content {
+    width: 60%;
+    padding: 20px;
+}
+
+.content p {
+    line-height: 1.6;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 25px 0;
+}
+
+.ads {
+    padding: 35px 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.footer {
+    padding: 20px;
+    background-color: #555;
+    color: white;
+    text-align: center;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .row {
+        flex-wrap: wrap;
+    }
+
+    .left {
+        width: 25%;
+    }
+
+    .content {
+        width: 75%;
+    }
+
+    .right {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+    }
+
+    .ads {
+        flex: 1;
+        margin-bottom: 0;
+    }
+}
+
+/* Điện thoại */
+@media (max-width: 600px) {
+    .header a {
+        padding: 12px;
+    }
+
+    .header .login {
+        margin-left: 0;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .left,
+    .content,
+    .right {
+        width: 100%;
+    }
+
+    .left a {
+        display: inline-block;
+        margin: 0 10px;
+    }
+}
